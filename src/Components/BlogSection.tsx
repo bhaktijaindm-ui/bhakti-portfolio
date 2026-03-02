@@ -1,3 +1,5 @@
+export { default } from "../Components/BlogSection";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";

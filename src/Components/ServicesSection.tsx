@@ -1,3 +1,5 @@
+export { default } from "../Components/ServicesSection";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {

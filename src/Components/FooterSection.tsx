@@ -1,3 +1,5 @@
+export { default } from "../Components/FooterSection";
+
 import { Link } from "react-router-dom";
 
 const FooterSection = () => (

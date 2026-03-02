@@ -1,3 +1,5 @@
+export * from "../../Components/UI/separator";
+
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 

@@ -1,3 +1,5 @@
+export { default } from "../Components/CaseStudiesSection";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";

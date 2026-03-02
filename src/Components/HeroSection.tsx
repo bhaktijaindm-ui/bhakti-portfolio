@@ -1,3 +1,5 @@
+export { default } from "../Components/HeroSection";
+
 import { motion } from "framer-motion";
 import heroMockup from "@/assets/hero-mockup.png";
 

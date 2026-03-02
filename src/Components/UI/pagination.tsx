@@ -1,3 +1,5 @@
+export * from "../../Components/UI/pagination";
+
 import * as React from "react";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 

@@ -1,3 +1,5 @@
+export { default } from "../Components/ContactSection";
+
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send } from "lucide-react";
