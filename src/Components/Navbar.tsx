@@ -8,7 +8,7 @@ const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Case Studies", href: "/#cases" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "/#blog" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -39,26 +39,16 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.href === "/blog" ? (
-              <Link
-                key={link.label}
-                to="/blog"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => handleNav(link.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            )
-          )}
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => handleNav(link.href)}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+            >
+              {link.label}
+            </a>
+          ))}
           <a href="/#contact" className="glow-button text-sm !px-6 !py-2.5">
             Get Started
           </a>
@@ -80,27 +70,16 @@ const Navbar = () => {
             className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border"
           >
             <div className="flex flex-col gap-4 p-6">
-              {navLinks.map((link) =>
-                link.href === "/blog" ? (
-                  <Link
-                    key={link.label}
-                    to="/blog"
-                    onClick={() => setOpen(false)}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => handleNav(link.href)}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                )
-              )}
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => handleNav(link.href)}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
               <a href="/#contact" className="glow-button text-center text-sm !py-3">
                 Get Started
               </a>

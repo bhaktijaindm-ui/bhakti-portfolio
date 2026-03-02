@@ -1,8 +1,33 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { posts } from "@/data/blog";
+
+const posts = [
+  {
+    slug: "seo-audit-checklist",
+    title: "The Essential SEO Audit Checklist for Service Businesses",
+    excerpt: "A practical, non-technical audit you can run in a weekend to uncover traffic and conversion opportunities on your site.",
+    category: "SEO Strategy",
+    date: "Feb 2026",
+    image: "/images/blog-seo-audit.jpg",
+  },
+  {
+    slug: "landing-page-conversions",
+    title: "7 Landing Page Tweaks That Can Double Your Conversions",
+    excerpt: "From above-the-fold clarity to social proof placement, these simple changes can have an outsized impact on your leads.",
+    category: "Conversion",
+    date: "Jan 2026",
+    image: "/images/blog-landing-page.jpg",
+  },
+  {
+    slug: "local-seo-playbook",
+    title: "Local SEO Playbook for Service Providers",
+    excerpt: "A step‑by‑step guide to get your business found by high‑intent local searches in your city.",
+    category: "Local SEO",
+    date: "Dec 2025",
+    image: "/images/blog-local-seo.jpg",
+  },
+];
 
 const BlogSection = () => {
   const ref = useRef(null);
@@ -30,7 +55,7 @@ const BlogSection = () => {
             transition={{ duration: 0.6 }}
             className="glass-card-hover group cursor-pointer overflow-hidden md:row-span-2"
           >
-            <Link to={`/blog/${posts[0].slug}`} className="block h-full">
+            <a href="#blog" className="block h-full">
               <div className="relative h-64 md:h-80 overflow-hidden">
                 <img
                   src={posts[0].image}
@@ -56,7 +81,7 @@ const BlogSection = () => {
                   Read More <ArrowRight size={14} />
                 </span>
               </div>
-            </Link>
+            </a>
           </motion.article>
 
           {posts.slice(1).map((post, i) => (
@@ -67,7 +92,7 @@ const BlogSection = () => {
               transition={{ duration: 0.6, delay: (i + 1) * 0.15 }}
               className="glass-card-hover group cursor-pointer overflow-hidden flex flex-col"
             >
-              <Link to={`/blog/${post.slug}`} className="flex flex-col sm:flex-row md:flex-col h-full">
+              <a href="#blog" className="flex flex-col sm:flex-row md:flex-col h-full">
                 <div className="relative h-48 sm:w-48 sm:h-auto md:w-full md:h-44 overflow-hidden flex-shrink-0">
                   <img
                     src={post.image}
@@ -93,15 +118,15 @@ const BlogSection = () => {
                     Read More <ArrowRight size={14} />
                   </span>
                 </div>
-              </Link>
+              </a>
             </motion.article>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/blog" className="glow-button-outline inline-block">
+          <a href="#blog" className="glow-button-outline inline-block">
             View All Articles
-          </Link>
+          </a>
         </div>
       </div>
     </section>
