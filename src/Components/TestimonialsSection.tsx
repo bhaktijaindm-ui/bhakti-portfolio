@@ -1,5 +1,3 @@
-export { default } from "../Components/TestimonialsSection";
-
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";

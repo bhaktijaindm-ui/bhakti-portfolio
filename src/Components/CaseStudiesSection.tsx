@@ -1,10 +1,46 @@
-export { default } from "../Components/CaseStudiesSection";
-
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { cases } from "@/data/cases";
+
+const cases = [
+  {
+    slug: "local-service-seo",
+    client: "Local Service Business",
+    industry: "Local SEO",
+    image: "/images/case-local-service.jpg",
+    excerpt: "How a service business grew search traffic and leads with a focused local SEO and content plan.",
+    metrics: [
+      { label: "Organic Traffic", value: "+180%" },
+      { label: "Leads per Month", value: "+3.2x" },
+      { label: "Top 3 Keywords", value: "24" },
+    ],
+  },
+  {
+    slug: "b2b-saas",
+    client: "B2B SaaS Brand",
+    industry: "B2B SaaS",
+    image: "/images/case-b2b-saas.jpg",
+    excerpt: "Turning a brochure website into a pipeline driver with conversion-first landing pages.",
+    metrics: [
+      { label: "Demo Requests", value: "+140%" },
+      { label: "Time on Page", value: "+60%" },
+      { label: "Bounce Rate", value: "-35%" },
+    ],
+  },
+  {
+    slug: "ecommerce-seo",
+    client: "E‑commerce Store",
+    industry: "E‑commerce",
+    image: "/images/case-ecommerce.jpg",
+    excerpt: "Scaling search revenue with technical fixes and long‑tail content.",
+    metrics: [
+      { label: "Search Revenue", value: "+92%" },
+      { label: "Indexed Pages", value: "+55%" },
+      { label: "Non‑Brand Clicks", value: "+120%" },
+    ],
+  },
+];
 
 const CaseStudiesSection = () => {
   const ref = useRef(null);

@@ -1,5 +1,3 @@
-export { default } from "../Components/Navbar";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
